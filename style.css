@@ -104,3 +104,19 @@ footer{background:rgba(14,12,34,.7);border-top:1px solid rgba(255,255,255,.04)}
 .legal .langnav{font-size:15px}
 .legal .stand{margin-top:24px;font-size:13px;color:var(--faint)}
 .legal [id]{scroll-margin-top:72px}
+/* digital platform display in the header */
+header.bar .wrap{gap:14px}
+.ticker{flex:1;min-width:0;height:30px;position:relative;display:block;overflow:hidden;border-radius:5px;background:#050608;border:1px solid #2A2E3C;box-shadow:inset 0 0 10px rgba(0,0,0,.9);text-decoration:none;-webkit-mask-image:linear-gradient(90deg,transparent,#000 14px,#000 calc(100% - 14px),transparent);mask-image:linear-gradient(90deg,transparent,#000 14px,#000 calc(100% - 14px),transparent)}
+.ticker::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle,transparent 0 .9px,rgba(5,6,8,.55) 1.25px) 0 0/3px 3px}
+.tk-track{position:absolute;top:0;left:0;height:100%;display:flex;white-space:nowrap;animation:tk 95s linear infinite}
+.tk-run{display:flex;align-items:center;height:100%}
+.tk-i{font-family:'Inter',system-ui,sans-serif;font-weight:600;font-size:13px;letter-spacing:.09em;color:#FFB347;text-shadow:0 0 6px rgba(255,170,60,.75);padding:0 4px}
+.tk-i b{font-weight:600;color:#FFD58A}
+.tk-i i{font-style:normal;color:#FFD58A}
+.tk-s{color:#7A5A2A;font-size:10px;padding:0 18px}
+.ticker:hover .tk-track,.ticker:focus-visible .tk-track{animation-play-state:paused}
+.ticker:focus-visible{outline:2px solid var(--lamp);outline-offset:2px}
+@keyframes tk{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.tk-track{animation:none}}
+@media(max-width:420px){header.bar .wrap{gap:10px}.tk-i{font-size:12px}}
+#neden{scroll-margin-top:60px}
