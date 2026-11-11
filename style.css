@@ -120,3 +120,4 @@ header.bar .wrap{gap:14px}
 @media(prefers-reduced-motion:reduce){.tk-track{animation:none}}
 @media(max-width:420px){header.bar .wrap{gap:10px}.tk-i{font-size:12px}}
 #neden{scroll-margin-top:60px}
+.legal .tldr{padding:12px 14px;border-left:3px solid var(--lamp);background:rgba(242,180,90,.08);border-radius:0 8px 8px 0;color:var(--parch);font-weight:500}
