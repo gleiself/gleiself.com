@@ -99,3 +99,8 @@ footer .links{display:flex;flex-wrap:wrap;gap:16px;margin:18px 0 12px;font-size:
 main>section{background:rgba(14,12,34,.58);border-top:0}
 main>section.alt{background:rgba(17,14,40,.64)}
 footer{background:rgba(14,12,34,.7);border-top:1px solid rgba(255,255,255,.04)}
+.legal main section{background:none;padding:8px 0 4px;border-top:1px solid rgba(255,255,255,.06)}
+.legal h3{font-family:'Cinzel',serif;color:var(--parch);font-size:18px;margin:18px 0 10px}
+.legal .langnav{font-size:15px}
+.legal .stand{margin-top:24px;font-size:13px;color:var(--faint)}
+.legal [id]{scroll-margin-top:72px}
