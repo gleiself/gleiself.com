@@ -158,6 +158,21 @@
   set(document.documentElement.getAttribute('data-lang'));
 })();
 (function(){
+  /* "Nächster Halt" sits a fixed 16px under the Follow button on every screen */
+  var b=document.querySelector('.hero .btn'), h=document.querySelector('.hero .halt'), hero=document.querySelector('.hero');
+  if(!b||!h||!hero)return;
+  function fit(){
+    h.style.top=''; hero.style.minHeight='';
+    var br=b.getBoundingClientRect(), hr=h.getBoundingClientRect(), top=hero.getBoundingClientRect().top, gap=16;
+    h.style.top=(br.bottom+gap-top+hr.height/2)+'px'; hr=h.getBoundingClientRect();
+    var need=hr.bottom-top+28; if(hero.offsetHeight<need)hero.style.minHeight=need+'px';
+  }
+  fit();
+  window.addEventListener('resize',fit);
+  var lb=document.querySelectorAll('.lang button');for(var i=0;i<lb.length;i++)lb[i].addEventListener('click',fit);
+  try{document.fonts.ready.then(fit)}catch(e){}
+})();
+(function(){
   var langs=['Español','Ελληνικά','العربية','Русский','Українська','Português','Kurdî','हिन्दी','中文','日本語','한국어','ไทย'];
   var w=document.querySelector('.flap .word'); if(!w)return;
   var calm=false; try{calm=window.matchMedia('(prefers-reduced-motion: reduce)').matches}catch(e){}
